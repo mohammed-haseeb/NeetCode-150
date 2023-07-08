@@ -51,7 +51,7 @@ public:
 
 
 /*
-// Recursive (have not gone through this, go through once)
+// Recursive
 ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
     ListNode* ptr1 = list1;
     ListNode* ptr2 = list2;
