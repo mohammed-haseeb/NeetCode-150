@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// inverting a BT
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
