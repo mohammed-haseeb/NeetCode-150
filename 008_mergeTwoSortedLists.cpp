@@ -1,21 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-struct ListNode {
+/****************************************************************/
+class ListNode {
+    public:
     int val;
     ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
 
+    ListNode (int val) {
+        this -> val = val;
+        next = NULL;
+    }
+};
+/****************************************************************/
 
 class Solution {
 public:
     // Iterative
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         
-        //Base case, if initally empty
+        //Base case, if any list initally empty
         if (!list1) {
             return list2;
         }
@@ -37,10 +41,12 @@ public:
             tail = tail -> next;
         }
 
+        // elements left in list1
         if (list1) {
             tail -> next = list1;
         }
-
+        
+        // elements left in list2
         if (list2) {
             tail -> next = list2;
         }
